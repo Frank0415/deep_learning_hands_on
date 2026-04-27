@@ -22,7 +22,7 @@ class SimpleNN(nn.Module):
         
     def forward(self, input):
         l1 = torch.sigmoid(self.layer1(input))
-        l2 = torch.sigmoid(self.layer2(l1))
+        l2 = self.layer2(l1)
         return l2
     
 model = SimpleNN()
